@@ -1,0 +1,92 @@
+/* Style the accordion */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s; /* Transisi untuk perubahan warna latar belakang saat dihover */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; /* Efek transisi untuk perubahan ketinggian */
+}
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+/* Container untuk kartu-kartu */
+.card-container {
+    display: flex; /* Gunakan flexbox */
+    justify-content: center; /* Menengahkan kartu-kartu secara horizontal */
+    flex-wrap: wrap; /* Biarkan kartu-kartu melompat ke baris baru jika tidak cukup ruang */
+}
+
+/* Style the card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: calc(20% - 20px); /* Atur lebar kartu sesuai kebutuhan */
+    margin: 30px; /* Jarak antara kartu-kartu */
+    border-radius: 5px; /* 5px rounded corners */
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Container for the image and text */
+.container {
+    padding: 2px 16px;
+}
+
+/* Style the image inside the card */
+.card img {
+    border-radius: 5px 5px 0 0; /* Add rounded corners to the top left and the top right corner of the image */
+    width: 100%;
+    height: 150px;
+}
+
+/* Style the button */
+.btn {
+    background-color: #3d56f8; /* Warna latar belakang */
+    border: none; /* Tanpa border */
+    color: white; /* Warna teks */
+    padding: 5px 10px; /* Padding (atas/bawah, kiri/kanan) */
+    text-align: center; /* Teks berada di tengah */
+    text-decoration: none; /* Tanpa underline */
+    display: inline-block; /* Tampilkan sebagai inline-block */
+    font-size: 15px; /* Ukuran font */
+    margin: 5px 2px; /* Margin (atas/bawah, kiri/kanan) */
+    cursor: pointer; /* Pointer ketika dihover */
+    border-radius: 5px; /* Sudut bulat */
+    transition: background-color 0.3s; /* Transisi untuk perubahan warna latar belakang */
+}
+
+/* Ketika tombol dihover */
+.btn:hover {
+    background-color: #131382; /* Warna latar belakang saat dihover */
+}

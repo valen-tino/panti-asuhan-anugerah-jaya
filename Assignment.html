@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Direct Transfer</h1>
+    <p>Your impact starts with a simple step - direct transfer donations! Make a difference effortlessly by contributing directly through bank transfers</p>
+    <button class="accordion">BCA</button>
+    <div class="panel">
+        <p>Transaction</p>
+    </div>
+    <button class="accordion">BNI</button>
+    <div class="panel">
+        <p>Transaction</p>
+    </div>
+
+<div class="card-container">
+    <div class="card">
+        <img src="image.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+        <h4><b>10 May 2024</b></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="btn">Read more</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="image.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+        <h4><b>10 May 2024</b></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="btn">Read more</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="image.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+        <h4><b>10 May 2024</b></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <button class="btn">Read more</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+
+</body>
+
+</html>

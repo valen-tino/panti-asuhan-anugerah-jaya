@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Accordion Title 1</div>
+            <div class="accordion-content">
+                Content for Accordion 1
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Accordion Title 2</div>
+            <div class="accordion-content">
+                Content for Accordion 2
+            </div>
+        </div>
+        
+        <script>
+            // Ambil semua elemen dengan class "accordion-title"
+const accordionTitles = document.querySelectorAll('.accordion-title');
+
+// Tambahkan event listener ke setiap judul accordion
+accordionTitles.forEach(title => {
+    title.addEventListener('click', () => {
+        // Toggle class "active" untuk item accordion saat judulnya diklik
+        title.parentNode.classList.toggle('active');
+    });
+});
+
+        </script>
+
+    </div>
+    <div class="card">
+        <img src="blog-image.jpg" alt="Blog Image">
+        <div class="container">
+            <span class="date">May 10, 2024</span>
+            <h4><b>Blog Title</b></h4>
+            <p>Short Description of the blog content goes here...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="blog-image.jpg" alt="Blog Image">
+        <div class="container">
+            <span class="date">May 10, 2024</span>
+            <h4><b>Blog Title</b></h4>
+            <p>Short Description of the blog content goes here...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="blog-image.jpg" alt="Blog Image">
+        <div class="container">
+            <span class="date">May 10, 2024</span>
+            <h4><b>Blog Title</b></h4>
+            <p>Short Description of the blog content goes here...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+    
+</body>
+</html>
