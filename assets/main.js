@@ -9,3 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
     };
 });
+
+// Javascript to add/remove the "transparent" class on navbar at home
+window.addEventListener('scroll', function() {
+    var nav = document.querySelector('.nav');
+    if (window.scrollY < 250) {
+        nav.classList.add('transparent');
+    } else {
+        nav.classList.remove('transparent');
+    }
+});
+
