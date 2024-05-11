@@ -1,8 +1,11 @@
+// LIST OF THE REQUIRED ATTRIBUTES
+// Implementing jQuery
 let imgSlides = document.querySelectorAll('.carousel-slides .carousel');
 let nextButton = document.querySelector('.nextBtn');
 let prevButton = document.querySelector('.prevBtn');
 let dots = document.querySelectorAll('.dot');
 
+// Init the counter
 let counter = 0;
 
 nextButton.addEventListener('click', moveNext);
