@@ -90,7 +90,7 @@ function changeImages(currentImage){
         // Add animation to hide the current carousel
         imgSlides[counter].style.animation = 'prevOne 0.5s ease-in forwards';
         counter = imageAttr;
-        // ADd animation to display the previous carousel
+        // Add animation to display the previous carousel
         imgSlides[counter].style.animation = 'prevTwo 0.5s ease-in forwards';
     }
     // Init and update the dot indicator
