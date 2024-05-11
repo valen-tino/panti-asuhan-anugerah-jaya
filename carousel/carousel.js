@@ -94,5 +94,5 @@ function changeImages(currentImage){
         imgSlides[counter].style.animation = 'prevTwo 0.5s ease-in forwards';
     }
     // Init and update the dot indicator
-    dotIndicators();
+    dotIndicators(); //
 }
