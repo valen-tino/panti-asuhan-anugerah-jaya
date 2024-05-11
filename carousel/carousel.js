@@ -8,6 +8,7 @@ let dots = document.querySelectorAll('.dot');
 // Init the counter
 let counter = 0;
 
+// This method below is used to add an event to the next button when the next button is clicked
 nextButton.addEventListener('click', moveNext);
 function moveNext(){
     imgSlides[counter].style.animation = 'nextOne 0.5s ease-in forwards';
