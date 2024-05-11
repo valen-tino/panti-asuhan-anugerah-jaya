@@ -25,7 +25,8 @@
     --default-heading-line-height: 100%;
     --default-line-height: 160%;
     --default-container-padding: 6vh 12vw;
-    --default-transition: all 0.3s ease;
+    --default-transition: all 0.3s ease-in;
+    --default-border-radius: 8px;
 
     --bold:700;
     --medium:500;
@@ -58,7 +59,7 @@ h1{
 h2{
     line-height: var(--default-line-height);
     font-size: var(--subheading-size);
-    font-weight: var(--medium);
+    font-weight: var(--bold);
 }
 
 p{
@@ -84,8 +85,8 @@ p.footer{
     
     h2{
         line-height: var(--default-line-height);
-        font-size: var(--paragraph-size);
-        font-weight: var(--medium);
+        font-size: var(--subheading-size);
+        font-weight: var(--bold);
     }
     
     p{
@@ -104,9 +105,9 @@ p.footer{
 
 .button{ /* this is the default button style */
     padding: 1em 2.1em 1.1em;
-    border-radius: 6px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    border-radius: var(--default-border-radius);
+    margin-top: var(--default-border-radius);
+    margin-bottom: var(--default-border-radius);
     border: none;
     text-align: center;
     text-decoration: none;
@@ -190,7 +191,7 @@ ul li a {
     text-decoration: none;
     color: var(--black);
     padding: 8px 16px;
-    border-radius: 7px;
+    border-radius: var(--default-border-radius);
     transition: var(--default-transition);
 }
 
@@ -213,7 +214,7 @@ ul li a.active {
 #icon {
     background-color: var(--primary-color);
     padding: 5px 7px 3px 7px;
-    border-radius: 4px;
+    border-radius: calc(var(--default-border-radius) - 4px);
     cursor: pointer;
     transition: var(--default-transition);
 }
@@ -251,7 +252,7 @@ ul li a.active {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    border-radius: 6px;
+    border-radius: var(--default-border-radius);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
@@ -260,7 +261,7 @@ ul li a.active {
 }
 
 .dropdown-content>li{
-    border-radius: 6px;
+    border-radius: var(--default-border-radius);
     padding: 6px;
 }
 
@@ -355,6 +356,7 @@ ul li a.active {
 }
 
 /* styling for home page */
+
 header.home{
     display: flex;
     flex-direction: column;
@@ -362,14 +364,18 @@ header.home{
     width: 100%;
     height: 100vh;
     position: relative;
-    background: url("../assets/photos/home-hero.jpg")
-    no-repeat center center/cover;
+    background: url("../assets/photos/home-hero.jpg");
     z-index: 1;
     justify-content: center;
     gap: 16px;
     text-align: center;
     background-size:cover;
     color: var(--beige);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .background-filter {
@@ -450,7 +456,127 @@ section.home-whatwedo{
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+/* Style the card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%; /* Atur lebar kartu sesuai kebutuhan */
+    margin: 8px;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Container for the image and text */
+.container {
+    padding: 20px;
+}
+
+/* Style the blog image */
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0; /* Rounded corners only on top */
+}
+
+/* Style the date */
+.date {
+    color: #888;
+}
+
+.second-part{
+    display: flex;
+    flex-direction: row;
+}
+
+section.home-recent-blogs{
+    display: flex;
+    flex-direction: column;
+    padding: var(--default-container-padding);
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+}
+
+section.home-letsgetinvolved{
+    display: flex;
+    flex-direction: column;
+    padding: var(--default-container-padding);
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+}
+
+section.home-letsgetinvolved > div.content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 100%;
+}
+
+div.content > div.first-part { 
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+div.content > div.second-part { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+div.content > div.third-part { 
+    grid-area: 2 / 1 / 3 / 3; 
+}
+
+div.letsgetinvolved-card {
+    border: 2px solid var(--gray);
+    transition: var(--default-transition);
+    width: 100%;
+    border-radius: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+div.letsgetinvolved-card:hover{
+    border: 2px solid var(--primary-color-hover);
+}
+
+div.content > div.third-part > div.letsgetinvolved-card{
+    color: var(--beige);
+    background-image: url(../assets/photos/sponsor-a-child.jpg);
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.background-filter-2 {
+    position: relative;
+    border-radius: 16px;
+}
+
+.background-filter-2::after {
+    border-radius: 16px;
+
+    background: -moz-linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,212,255,0) 100%);
+
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0;
+  }
+
+  div.content > div.third-part > div.letsgetinvolved-card > div.container{
+    position: relative;
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 768px) {
     header.home > div.button-row{
         flex-direction: column;
     }
@@ -462,4 +588,28 @@ section.home-whatwedo{
     section.home-aboutus{
         flex-direction: column;
     }
+
+    .second-part{
+        flex-direction: column;
+    }
+    section.home-letsgetinvolved > div.content{
+        display: flex;
+        flex-direction: column;
+    }
+    div.letsgetinvolved-card{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .background-filter-2::after{
+        background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 7%, rgba(0,212,255,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 7%, rgba(0,212,255,0) 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 7%, rgba(0,212,255,0) 100%);
+    }
+}
+
+footer{
+    display: flex;
+    padding: var(--default-container-padding);
+    background-color: var(--black);
 }
