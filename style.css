@@ -9,6 +9,7 @@
     border: none;
     outline: none;
     transition: background-color 0.4s; 
+    margin-bottom: 10px;
 }
 
 /*Background color*/
@@ -25,18 +26,19 @@
     transition: max-height 0.2s ease-out; 
 }
 
-    /*character (+)*/
-  .accordion:after {
+/*character (+)*/
+.accordion:after {
     content: '\02795'; 
     font-size: 13px;
     color: #777;
     float: right;
     margin-left: 5px;
-  }
-  /* character (-)*/
-  .active:after {
+}
+
+/* character (-)*/
+.active:after {
     content: "\2796"; 
-  }
+}
 
 /*container card */
 .card-container {
@@ -45,30 +47,40 @@
     flex-wrap: wrap; 
 }
 
-/* Style the card */
+/* Style card */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: calc(20% - 20px); 
-    margin: 30px; 
-    border-radius: 5px; 
+    width: calc(33.33% - 30px); 
+    margin: 15px; 
+    border-radius: 5px;
 }
 
-/*mouse hover */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+/* responsif */
+@media screen and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 30px); 
+    }
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(100% - 30px); 
+    }
+}
+
 
 /*container image*/
 .container {
     padding: 2px 16px;
+    margin-bottom: 20px;
 }
 
 /* Style the image inside the card */
 .card img {
     border-radius: 5px 5px 0 0;
     width: 100%;
-    height: 150px;
+    height: auto; 
 }
 
 /* Style the button */
@@ -76,7 +88,7 @@
     background-color: #3d56f8; 
     border: none;
     color: white; 
-    padding: 5px 10px; 
+    padding: 10px 15px; 
     text-align: center;
     text-decoration: none; 
     display: inline-block; 
