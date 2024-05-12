@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
 .carousel-wrapper {
     position: relative;
-    width: 100%;
-    height: 50vh;
+    width: 1400px;
+    height: 600px;
 }
 
 .carousel-wrapper .carousel-slides {
@@ -9,7 +26,6 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 32px;
 }
 
 .carousel-wrapper .carousel-slides .carousel {
@@ -35,50 +51,45 @@
 }
 
 .text-description {
-    margin: 20px 60px 80px 60px;
+    margin: 20px 100px 80px 100px;
     max-width: 700px;
 }
 
-#first {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/anugerah-jaya-establishment.jpg');
-    background-size: 1100px 310px;
+.text-description h1 {
+    font-size: clamp(45px, 4.5vw, 65px);
+    margin-bottom: 10px;
 }
 
-#second {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/policy-shift.jpg');
-    background-size: 1100px 310px;
+.text-description h2 {
+    font-size: clamp(25px, 2.5vw, 40px);
+    margin-bottom: 15px;
+}
+
+.text-description p {
+    font-size: clamp(13px, 1.2vw, 17px);
+    margin-top: 15px;
+}
+
+#first, #fourth, #sixth {
+    background: rgba(0,0,0,0.7)url("sample-asset/nature1.png");
+    background-size: 1400px 640px;
+}
+
+#second, #fifth, #seventh {
+    background: rgba(0,0,0,0.7)url("sample-asset/nature2.png");
+    background-size: 1400px 640px;
 }
 
 #third {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/partnerships.jpg');
-    background-size: 1100px 310px;
-}
-
-#fourth {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/activities.jpg');
-    background-size: 1100px 310px;
-}
-
-#fifth {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/honor-milestones.jpg');
-    background-size: 1100px 310px;
-}
-
-#sixth {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/testimonies.jpg');
-    background-size: 1100px 310px;
-}
-
-#seventh {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/looking-forward.jpg');
-    background-size: 1100px 310px;
+    background: rgba(0,0,0,0.7)url("sample-asset/nature3.png");
+    background-size: 1400px 640px;
 }
 
 span.nextBtn, span.prevBtn {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    padding: 8px;
+    padding: 14px;
     color: #eee;
     font-size: 30px;
     font-weight: bold;
@@ -114,7 +125,7 @@ span.nextBtn:hover, span.prevBtn:hover {
 .dots-container .dot {
     display: inline-block;
     width: 15px;
-    height: 10px;
+    height: 15px;
     margin: 0 10px 5px 0;
     padding: 5px 2.5px 5px 2.5px;
     border: 2.5px solid #fff;
@@ -157,11 +168,5 @@ span.nextBtn:hover, span.prevBtn:hover {
         left: -100%;
     } to {
         left: 0%;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .carousel-wrapper{
-        height: 600px;
     }
 }
