@@ -732,3 +732,78 @@ img.whywedoit-img:hover{
     }
 }
 
+/* Style the accordion */
+.accordion {
+    background: transparent;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: none;
+    transition: background-color 0.4s; 
+    font-weight: var(--bold);
+    font-size: var(--subheading-size);
+}
+
+/*Background color*/
+.accordion.active{
+    color: var(--primary-color-pressed);
+}
+
+.accordion:hover {
+    color: var(--primary-color-hover);
+}
+
+/* Style the accordion panel */
+.panel {
+    padding: 0 18px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; 
+}
+
+/*character (+)*/
+.accordion:after {
+    content: '\02795'; 
+    font-size: var(--paragraph-size);
+    color: var(--black);
+    float: right;
+    margin-left: 5px;
+}
+
+/* character (-)*/
+.accordion.active:after {
+    content: "\2796"; 
+    color: var(--primary-color-pressed);
+}
+
+div.accordion-container{
+    padding: 24px 32px;
+}
+
+/* responsif */
+@media screen and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 30px); 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(100% - 30px); 
+    }
+}
+
+section.aboutus-whyweexist > div.second-part{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    text-align: left;
+    border: 2px solid var(--gray);
+    border-radius: 16px;
+    }
