@@ -555,6 +555,26 @@ section.aboutus-whyweexist
     padding: 20px;
 }
 
+/* New code for the CTA Button */
+.read-more-section {
+    display: block;
+    opacity: 0;
+    height: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.read-more-section--display {
+    display: block;
+    opacity: 1;
+    height: 5rem;
+}
+
+#buttons {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
 /* Style the blog image */
 .card img {
     width: 100%;
