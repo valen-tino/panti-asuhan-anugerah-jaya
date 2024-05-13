@@ -982,7 +982,31 @@ footer{
 	}
 }
 
+div.donate-with-qris{
+    display:flex;
+    align-items: center;
+    flex-direction:row;
+    gap: 16px;
+    padding: var(--after-previous-container-padding);
+
+    & > div.first-part{
+        text-align: left;
+    }
+
+    & > div.second-part > img{
+        border-radius: 32px;
+        border: 6px solid var(--primary-color);
+        padding: 8px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
+    div.donate-with-qris{
+        padding: 16px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
     footer{
         & > div.signup-newsletter,
         & > div.signup-newsletter > form,
@@ -1003,4 +1027,6 @@ footer{
         }
     }
 }
+
+
 
