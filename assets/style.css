@@ -846,6 +846,105 @@ section.aboutus-whyweexist > div.second-part{
     border-radius: 16px;
     }
 
+section.others{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        padding: var(--default-container-padding);
+    
+        & > div.contact-info{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            gap:16px;
+    
+            & > .card{
+                display: flex;
+                align-items: center;
+                background-color: var(--beige);
+                color: var(--black);
+                margin: 0;
+    
+                &:nth-child(1){
+                    background-color: var(--primary-color);
+                }
+    
+                &:nth-child(2){
+                    background-color: var(--gray);
+                }
+    
+                &:nth-child(3){
+                    background-color: #f4c152;
+                }
+    
+                &:nth-child(4){
+                    background-color: #547fff;
+                }
+    
+                & > .container{
+                    display:flex;
+                    flex-direction: row;
+                    column-gap: 16px;
+                    align-items: center;
+    
+                    & > img.svg-icon{
+                        width: 30px;
+                        height: 30px;
+                        padding: 16px;
+                        border: 2px solid var(--black);
+                        border-radius:999px;
+    
+                    }
+    
+                }
+    
+            }
+        }
+    
+        & > div.signup-newsletter{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+    
+            & > h3{
+                color: var(--beige);
+                width: 50%;
+            }
+    
+            & > form,
+            & > form > div.newsletter-details{
+                display:flex;
+                flex-direction: row;
+                gap:8px;
+            }
+        }
+    
+        & > div.copyright{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+    
+            & > div.first-part{
+                color:var(--beige);
+            }
+    
+            & > div.second-part > ul{
+                list-style-type: none;
+    
+                & > li > a{
+                    color: var(--beige);
+    
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+    
+            }
+            
+        }
+} 
 
 /* footer */
 footer{
@@ -1000,11 +1099,50 @@ div.donate-with-qris{
     }
 }
 
+form.contact-us-form{
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    row-gap: 16px;
+    column-gap: 16px;
+    border-radius: 24px;
+    border: 4px solid var(--primary-color);
+
+    & > div.user-details{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+
+        & > div.row{
+            display: flex;
+            flex-direction: row;
+            column-gap: 16px;
+        }
+    }
+}
+
+.form-col textarea {
+    width: 100%;
+    border: none;
+    background: #fff;
+    color: #7e7c87;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1024px) {
     div.donate-with-qris{
         padding: 16px;
         flex-direction: column;
         gap: 4px;
+    }
+
+    section.others{
+        & > div.contact-info{
+            flex-direction:column;
+        }
     }
 
     footer{
