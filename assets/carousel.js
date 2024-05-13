@@ -76,7 +76,7 @@ function dotIndicators(){
 // This method is used to switch carousel once the dot is clicked
 function changeImages(currentImage){
     currentImage.classList.add('active'); // Add the active class to the clicked dot indicator
-    let imageAttr = currentImage.getAttribute('attr'); // Fetch the index of the clicked dot indicator
+    let imageAttr = currentImage.getAttribute('my-attr'); // Fetch the index of the clicked dot indicator
     if(imageAttr > counter){
         // Add animation to hide the current carousel
         imgSlides[counter].style.animation = 'nextOne 0.5s ease-in forwards';
