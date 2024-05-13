@@ -526,6 +526,15 @@ section.aboutus-whywedoit{
     align-items: center;
 }
 
+section.sponsor-a-child-whatdoyouexpect{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: var(--default-container-padding);
+    gap: 32px;
+    align-items: center;
+    justify-content:space-between;
+}
+
 section.home-aboutus > p,
 section.aboutus-whywedoit > p{
     width: 75%;
@@ -534,7 +543,8 @@ section.aboutus-whywedoit > p{
 section.home-whatwedo,
 section.aboutus-our-history,
 section.home-recent-blogs,
-section.aboutus-whyweexist
+section.aboutus-whyweexist,
+section.sponsor-a-child
 {
     display: flex;
     flex-direction: column;
@@ -542,6 +552,12 @@ section.aboutus-whyweexist
     gap: 32px;
     align-items: center;
     text-align: center;
+}
+
+section.sponsor-a-child > div.scholarship-living-support{
+    display:flex;
+    flex-direction: row;
+    gap:16px;
 }
 
 
@@ -677,7 +693,9 @@ div.letsgetinvolved-card {
     }
 
     section.home-aboutus,
-    section.aboutus-whywedoit{
+    section.aboutus-whywedoit,
+    section.sponsor-a-child-whatdoyouexpect
+    {
         flex-direction: column;
     }
 
@@ -710,11 +728,6 @@ img.blog-image{
     background-size: cover;
 }
 
-footer{
-    display: flex;
-    padding: var(--default-container-padding);
-    background-color: var(--black);
-}
 
 section.blogs-main{
     display: flex;
@@ -732,8 +745,10 @@ section.blogs-main{
 }
 
 img.whywedoit-img{
+    object-fit: cover;
     border-radius: 32px;
-    width: 500px;
+    width: 600px;
+    height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
     &:hover{
@@ -749,6 +764,10 @@ img.whywedoit-img{
 
     img.whywedoit-img{
         border-radius: 32px;
+    }
+
+    section.sponsor-a-child > div.scholarship-living-support{
+        flex-direction:column;
     }
 }
 
@@ -830,6 +849,61 @@ section.aboutus-whyweexist > div.second-part{
 
 /* footer */
 footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: var(--default-container-padding);
+    background-color: var(--black);
+
+    & > div.contact-info{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap:16px;
+
+        & > .card{
+            display: flex;
+            align-items: center;
+            background-color: var(--beige);
+            color: var(--black);
+            margin: 0;
+
+            &:nth-child(1){
+                background-color: var(--primary-color);
+            }
+
+            &:nth-child(2){
+                background-color: var(--gray);
+            }
+
+            &:nth-child(3){
+                background-color: #f4c152;
+            }
+
+            &:nth-child(4){
+                background-color: #547fff;
+            }
+
+            & > .container{
+                display:flex;
+                flex-direction: row;
+                column-gap: 16px;
+                align-items: center;
+
+                & > img.svg-icon{
+                    width: 30px;
+                    height: 30px;
+                    padding: 16px;
+                    border: 2px solid var(--black);
+                    border-radius:999px;
+
+                }
+
+            }
+
+        }
+    }
+
     & > div.signup-newsletter{
         display: flex;
         flex-direction: row;
@@ -847,6 +921,31 @@ footer{
             flex-direction: row;
             gap:8px;
         }
+    }
+
+    & > div.copyright{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        & > div.first-part{
+            color:var(--beige);
+        }
+
+        & > div.second-part > ul{
+            list-style-type: none;
+
+            & > li > a{
+                color: var(--beige);
+
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+
+        }
+        
     }
 } 
 
@@ -883,7 +982,7 @@ footer{
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     footer{
         & > div.signup-newsletter,
         & > div.signup-newsletter > form,
@@ -894,5 +993,14 @@ footer{
         & > div.signup-newsletter > h3{
             width:100%;
         }
+
+        & > div.contact-info{
+            flex-direction:column;
+        }
+
+        & > div.copyright{
+            flex-direction: column-reverse;
+        }
     }
 }
+
