@@ -1,3 +1,8 @@
+:root{
+    --carousel-background-style: rgba(0,0,0,0.7) no-repeat center center;
+    --carousel-background-size: cover;
+}
+
 .carousel-wrapper {
     position: relative;
     width: 100%;
@@ -17,16 +22,18 @@
     width: 100%;
     position: absolute;
     object-fit: cover;
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
+
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--beige);
 }
 
 .carousel-wrapper .carousel-slides .carousel:not(.active){
@@ -40,38 +47,59 @@
 }
 
 #first {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/anugerah-jaya-establishment.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/anugerah-jaya-establishment.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 #second {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/policy-shift.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/policy-shift.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 #third {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/partnerships.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/partnerships.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 #fourth {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/activities.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/activities.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 #fifth {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/honor-milestones.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/honor-milestones.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 #sixth {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/testimonies.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/testimonies.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 #seventh {
-    background: rgba(0,0,0,0.7)url('photos/carousel-photos/looking-forward.jpg');
-    background-size: 1100px 310px;
+    background: var(--carousel-background-style) url('photos/carousel-photos/looking-forward.jpg');
+    -webkit-background-size: var(--carousel-background-size);
+    -moz-background-size: var(--carousel-background-size);
+    -o-background-size: var(--carousel-background-size);
+    background-size: var(--carousel-background-size);
 }
 
 span.nextBtn, span.prevBtn {
@@ -98,7 +126,7 @@ span.prevBtn {
 }
 
 span.nextBtn:hover, span.prevBtn:hover {
-    background-color: #fff; 
+    background-color: var(--beige); 
     opacity: 0.75;
     color: #222;
 }
@@ -117,7 +145,7 @@ span.nextBtn:hover, span.prevBtn:hover {
     height: 10px;
     margin: 0 10px 5px 0;
     padding: 5px 2.5px 5px 2.5px;
-    border: 2.5px solid #fff;
+    border: 2.5px solid var(--beige);
     border-radius: 50%;
     color: transparent;
     cursor: pointer;
@@ -125,7 +153,8 @@ span.nextBtn:hover, span.prevBtn:hover {
 }
 
 .dots-container .active {
-    background-color: #fff; 
+    border: 2.5px solid var(--primary-color);
+    background-color: var(--primary-color); 
 }
 
 @keyframes nextOne {
