@@ -18,18 +18,18 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
         <ul>
-            <li><a href="index.html" ref="nofollow">Home</a></li>
-            <li><a href="aboutus.html" ref="nofollow">About Us</a></li>
-            <li><a href="blogs.html" ref="nofollow">Blogs</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
             <li class="dropdown">
-                <a href="#" ref="nofollow">Get Involved</a>
+                <a href="#">Get Involved</a>
                 <ul class="dropdown-content">
-                    <li><a href="get-involved/become-a-volunteer.html" ref="nofollow">Become A Volunteer</a></li>
-                    <li><a href="get-involved/sponsor-a-child.html" ref="nofollow">Sponsor A Child</a></li>
+                    <li><a href="get-involved/become-a-volunteer.html">Become A Volunteer</a></li>
+                    <li><a href="get-involved/sponsor-a-child.html">Sponsor A Child</a></li>
                 </ul>
             </li>
-            <li><a href="contactus.html" class="active" ref="nofollow">Contact Us</a></li>
-            <li><a href="donate.html" class="button primary" ref="nofollow">Donate</a></li>
+            <li><a href="contactus.html" class="active">Contact Us</a></li>
+            <li><a href="donate.html" class="button primary">Donate</a></li>
         </ul>
     </nav>
     <!-- End Navbar -->
@@ -39,24 +39,107 @@
         <h1>Get In Touch.</h1>
         <p class="subheader">Get in touch with us to find out more about our goals, initiatives, and ways that you can contribute.<br/>Contact us for inquiries, collaborations, or to simply share your thoughts.         </p>
         <div class="button-row">
-            <a href="" class="button primary">Donate Now</a>
+            <a href="#contactus" class="button primary">Contact us</a>
         </div>
     </header>
     <!-- End Header -->
 
-    <!-- Start Why We Do It Section -->
-    <section id="whywedoit" class="aboutus-whywedoit">
+    <!-- Start Contact Us Section -->
+    <section id="contactus" class="aboutus-whywedoit">
         <div class="first-part">
-            <h2>Why We Do It?</h2>
-            <p>We are willing to provide a compassionate and empowering environment for Bali’s most vulnerable children. Our organization, Anugerah Jaya, was founded in 2018 with a steadfast dedication to addressing gaps in support and opportunities for children who have been neglected, orphaned, or do not have family support. We strive to ensure that every child in our care reaches their full potential and achieves their dreams. Through our commitment by giving care, assistance, and opportunity to Bali’s vulnerable children, we aim to provide a better future for them.</p>
+            <h2>Connect with us!</h2>
+            <p>
+                We are open to your support and questions. Whether you wish to <strong>support a child, become a volunteer, or donate goods,</strong> our team is eager to guide you through the process. Use our straightforward support form to select how you would like to contribute to our cause. You can choose to nurture a child’s future, join our family of dedicated volunteers, or provide essential items that help us daily. Our compassionate staff is dedicated to ensuring that your generosity reaches those in need. Your involvement is invaluable to us, and we are excited to welcome you to our community.
+                <br/><br/>If you need any more adjustments or have specific requirements for the content, feel free to ask!
+            </p>
         </div>
         <div class="second-part">
-            <form action="" class="contactus-form">
+            <form action="#" class="contact-us-form">
+                <div class="user-details">
+                    <div class="row">
+                        <div class="input">
+                            <input type="text" class="input-field" required/>
+                            <label class="input-label">First name</label>
+                        </div>
+                        <div class="input">
+                            <input type="text" class="input-field" required/>
+                            <label class="input-label">Last name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input">
+                            <input type="email" class="input-field" required/>
+                            <label class="input-label">Email address</label>
+                        </div>
+                        <div class="input">
+                            <input type="tel" class="input-field" required/>
+                            <label class="input-label">Phone Number</label>
+                        </div>
+                    </div>
+                  </div>
+    
+                <div class="input">
+                    <select class="input-field">
+                      <option hidden>Select Subject</option>
+                      <option>Sponsor A Child</option>
+                      <option>Become A Volunteer</option>
+                      <option>Item Donation</option>
+                    </select>
+                  </div>
                 
+                <textarea class="input-field" name="" id="" cols="30" rows="8" placeholder="Enter your message here..." required></textarea>
+                
+                <button class="button primary">Submit</button>
             </form>
         </div>
     </section>
     <!-- End Why We Do It Section -->
+
+    <section class="others">
+        <div class="contact-info">
+            <div class="card">
+                <div class="container">
+                    <img src="assets/pin-icon.svg" alt="Address Icon" class="svg-icon">
+                    <div class="info-content">
+                        <h3>Address</h3>
+                        <p>
+                            <strong>Lembaga Kesejahteraan Sosial Anak Anugerah</strong><br/>
+                            Jl. Cokroaminoto No.34 Denpasar<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <img src="assets/phone-icon.svg" alt="Phone Number Icon" class="svg-icon">
+                    <div class="info-content">
+                        <h3>Phone Number</h3>
+                        <p><a href="tel:+62361426484" target="_blank">0361 - 426484</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="container">
+                    <img src="assets/email-icon.svg" alt="Email Icon" class="svg-icon">
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p><a href="mailto:lksadenpasar@gmail.com" target="_blank">lksadenpasar@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+             <div class="card">
+                <div class="container">
+                    <img src="assets/facebook.svg" alt="Facebook Page Icon" class="svg-icon">
+                    <div class="info-content">
+                        <h3>Facebook Page</h3>
+                        <p><a href="https://www.facebook.com/pantiasuhanputerianugerahdenpasar" target="_blank">Our Facebook Page</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     
     <!-- Start Footer -->
     <footer>
