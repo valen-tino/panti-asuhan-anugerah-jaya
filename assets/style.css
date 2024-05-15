@@ -747,7 +747,7 @@ section.blogs-main{
 img.whywedoit-img{
     object-fit: cover;
     border-radius: 32px;
-    width: 600px;
+    width: 400px;
     height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
@@ -764,6 +764,7 @@ img.whywedoit-img{
 
     img.whywedoit-img{
         border-radius: 32px;
+        width: 100vw;
     }
 
     section.sponsor-a-child > div.scholarship-living-support{
@@ -1165,6 +1166,3 @@ form.contact-us-form{
         }
     }
 }
-
-
-
