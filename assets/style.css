@@ -1146,6 +1146,10 @@ form.contact-us-form{
         }
     }
 
+    form.contact-us-form{
+        width: 400px;
+    }
+
     footer{
         & > div.signup-newsletter,
         & > div.signup-newsletter > form,
